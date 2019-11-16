@@ -30,6 +30,7 @@ public class FlightSearch extends TestBase {
 	@BeforeMethod
 	public void launchBrowser() {
 		init(config.getProperty("browser"), config.getProperty("url"));
+		//adding this comment for git learning purpose
 	}
 	
 	@Test
