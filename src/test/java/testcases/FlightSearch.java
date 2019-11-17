@@ -14,9 +14,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Utilities.DataUtils;
+import base.DriverManager;
 import base.TestBase;
 import extentreports.ExtentListeners;
 
@@ -27,15 +29,16 @@ public class FlightSearch extends TestBase {
 		super.setUp();
 	}
 	
+	@Parameters("browser")
 	@BeforeMethod
-	public void launchBrowser() {
-		init(config.getProperty("browser"), config.getProperty("url"));
+	public void launchBrowser(String browser) {
+		init(browser, config.getProperty("url"));
 		//adding this comment for git learning purpose
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void verifyHomePage() {
-		String actualTitle = driver.getTitle();
+		//String actualTitle = driver.getTitle();
 		String expectedTitle = config.getProperty("title");
 		
 		//ExtentListeners.test.info("Expected title is "+expectedTitle);
@@ -49,15 +52,33 @@ public class FlightSearch extends TestBase {
 	
 	@Test(dataProvider="getData", dataProviderClass = DataUtils.class)
 	public void flightSearch(String origin, String departDate, String returnDate, String destination, String validateText) {
-		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		click("FlightTab_ID", "Flight Tab");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		type("Origin_XPATH", origin, "Origin text field");
 		type("DepartDate_XPATH", departDate, "Departure Date text field");
 		type("ReturnDate_XPATH", returnDate, "Return Date text field");
 		type("Destination_XPATH", destination, "Destination text field");
 		click("FlightSubmit_XPATH", "Search Button");
 		
-		String text = driver.findElement(By.className("title-city-text")).getText();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String text = DriverManager.getDriver().findElement(By.className("title-city-text")).getText();
 		ExtentListeners.test.info("Actual text is "+text);
 		ExtentListeners.test.info("Expected text is "+validateText);
 
@@ -75,7 +96,8 @@ public class FlightSearch extends TestBase {
 	@AfterMethod
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(5000);
-		driver.quit();
+		closeBrowser();
+		
 	}
 	
 	

@@ -42,7 +42,7 @@ public class ExtentListeners implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		
 		
-		TestBase.captureScreenshot();
+		//TestBase.captureScreenshot();
 		
 		try {
 			test.fail("<b>"+"font color="+"red"+"Screenshot of failure"+"</font>"+"</b>", MediaEntityBuilder.createScreenCaptureFromPath(TestBase.screenshotName).build());
