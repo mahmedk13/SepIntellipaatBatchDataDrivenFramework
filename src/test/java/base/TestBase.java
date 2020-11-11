@@ -57,23 +57,20 @@ public class TestBase {
 	
 	public void initializeBrowser(String browser, String url) {
 		
+			if(config.getProperty("isGrid").equalsIgnoreCase("true")) {
 			DesiredCapabilities caps =null;
 			if(browser.equalsIgnoreCase("chrome")) {
-				caps= DesiredCapabilities.chrome();
+				caps=DesiredCapabilities.chrome();
 				caps.setBrowserName("chrome");
 				caps.setPlatform(Platform.ANY);
-				
 			}else if(browser.equalsIgnoreCase("firefox")){
 				caps=DesiredCapabilities.firefox();
 				caps.setBrowserName("firefox");
 				caps.setPlatform(Platform.ANY);
-				
 			}else if(browser.equalsIgnoreCase("ie")) {
 				caps=DesiredCapabilities.internetExplorer();
 				caps.setBrowserName("iexplore");
 				caps.setPlatform(Platform.WIN10);
-				
-				
 			}else {
 				System.out.println("incorrect browser");
 			}
@@ -85,14 +82,26 @@ public class TestBase {
 				e.printStackTrace();
 			}
 
+		}else {
+
+			if(browser.equalsIgnoreCase("chrome")) {
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+			}else if(browser.equalsIgnoreCase("firefox")) {
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+			}else {
+				System.out.println("browser not defined");
+			}
+		}
 		
 		
 		DriverManager.setWebDriver(driver);
 		DriverManager.getDriver().get(url);
 		DriverManager.getDriver().manage().window().maximize();
 		DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		
+	
 	}
 	
 	public void click(String locator, String elementName) {
