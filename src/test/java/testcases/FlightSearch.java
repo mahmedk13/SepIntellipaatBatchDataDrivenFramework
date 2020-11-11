@@ -3,12 +3,13 @@ package testcases;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.reflect.Method;
+import java.net.MalformedURLException;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,87 +21,74 @@ import org.testng.annotations.Test;
 import Utilities.DataUtils;
 import base.DriverManager;
 import base.TestBase;
-import extentreports.ExtentListeners;
 
 public class FlightSearch extends TestBase {
 	
 	@BeforeSuite
-	public void beforeSuite() {
+	public void init() {
 		super.setUp();
 	}
 	
 	@Parameters("browser")
 	@BeforeMethod
-	public void launchBrowser(String browser) {
-		init(browser, config.getProperty("url"));
-		//adding this comment for git learning purpose
+	public void launchBrowser(String browser) throws MalformedURLException {
+		initializeBrowser(browser, config.getProperty("url"));		
 	}
 	
 	@Test(enabled=false)
 	public void verifyHomePage() {
-		//String actualTitle = driver.getTitle();
-		String expectedTitle = config.getProperty("title");
+		String actualTitle = driver.getTitle();
+		String expectedTitle=config.getProperty("title");
+		System.out.println();
 		
-		//ExtentListeners.test.info("Expected title is "+expectedTitle);
-		//ExtentListeners.test.info("Actual title is "+actualTitle);
-		Assert.fail();
-		//Assert.assertEquals(actualTitle, expectedTitle);
-		//ExtentListeners.test.pass("Actual title and Expected Title are equal");
-
-	
+		Assert.assertEquals(actualTitle, expectedTitle);	
 	}
 	
-	@Test(dataProvider="getData", dataProviderClass = DataUtils.class)
-	public void flightSearch(String origin, String departDate, String returnDate, String destination, String validateText) {
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		click("FlightTab_ID", "Flight Tab");
+	
+	@Test(dataProvider="getData", dataProviderClass=DataUtils.class)
+	public void searchFlight(String origin, String destination, String departDate, String returnDate, String validateText) {
+		
+		
+		click("FlightTab_CSS", "Flight Tab");
+		
+		click("OriginBtn_CSS", "Origin input field");
+		typeWithEnter("OriginInput_CSS", origin, "Origin input field");
+
+		click("DepartBtn_CSS", "Departure Input field");
+		typeWithEnter("DepartInput_CSS", destination, "destination input field");
+
+//		click("DepartDateBtn_CSS", "Departure Date field");
+//		DriverManager.getDriver().findElement(By.xpath("//button[@aria-label='"+departDate+"']")).click();
+//		click("ApplyDateBtn_CSS", "Apply button on Departure Date");
+//		
+//		click("ReturnDateBtn_CSS", "Return Date field");
+//		DriverManager.getDriver().findElement(By.xpath("//button[@aria-label='"+returnDate+"']")).click();
+//		click("ApplyDateBtn_CSS", "Apply button on Return Date");
+//		
+		System.out.println(departDate);
+		System.out.println(returnDate);
+		click("SearchBtn_CSS", "Search Button");
+
+		
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		type("Origin_XPATH", origin, "Origin text field");
-		type("DepartDate_XPATH", departDate, "Departure Date text field");
-		type("ReturnDate_XPATH", returnDate, "Return Date text field");
-		type("Destination_XPATH", destination, "Destination text field");
-		click("FlightSubmit_XPATH", "Search Button");
-		
-		
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		String text = DriverManager.getDriver().findElement(By.className("title-city-text")).getText();
-		ExtentListeners.test.info("Actual text is "+text);
-		ExtentListeners.test.info("Expected text is "+validateText);
+		String actualValidateText = DriverManager.getDriver().findElement(By.xpath(OR.getProperty("ValidateText_Xpath"))).getText();
+		Assert.assertEquals(actualValidateText, validateText);
 
-		
-		Assert.assertTrue(text.contains(validateText));
-		ExtentListeners.test.pass("User is able to search flight");
-		
-		
-	
 	}
-	
-	
-	
 	
 	@AfterMethod
-	public void tearDown() throws InterruptedException {
-		Thread.sleep(5000);
+	public void tearDown() {
 		closeBrowser();
-		
 	}
 	
 	
+	
+
 	
 	
 

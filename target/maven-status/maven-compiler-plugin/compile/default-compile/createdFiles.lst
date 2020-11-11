@@ -1,6 +1,7 @@
 base\TestBase.class
-Utilities\DataUtils.class
 testcases\FlightSearch.class
+testcases\HotelSearch.class
+Utilities\DataUtils.class
+base\DriverManager.class
 extentreports\ExtentManager.class
 extentreports\ExtentListeners.class
-testcases\HotelSearch.class

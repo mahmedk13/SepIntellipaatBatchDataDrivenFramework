@@ -2,55 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Smoke Suite" duration-ms="115035" started-at="2019-11-17T16:17:58Z" finished-at="2019-11-17T16:19:53Z">
+  <suite name="Smoke Suite" duration-ms="50359" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:48Z">
     <groups>
     </groups>
-    <test name="Chrome Test" duration-ms="54657" started-at="2019-11-17T16:17:58Z" finished-at="2019-11-17T16:18:53Z">
+    <test name="Chrome Test" duration-ms="39213" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:37Z">
       <class name="testcases.HotelSearch">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:testcases.HotelSearch@727803de]" name="beforeMethod" is-config="true" duration-ms="22896" started-at="2019-11-17T16:17:59Z" finished-at="2019-11-17T16:18:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="hotelSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HotelSearch@727803de]" name="hotelSearch" duration-ms="25162" started-at="2019-11-17T16:18:22Z" data-provider="getData" finished-at="2019-11-17T16:18:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Hyderabad]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[11/28/2019]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/30/2019]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Hyderabad (and vicinity), India Hotel Search Results]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hotelSearch -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HotelSearch@727803de]" name="tearDown" is-config="true" duration-ms="5811" started-at="2019-11-17T16:18:47Z" finished-at="2019-11-17T16:18:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.HotelSearch -->
-      <class name="testcases.FlightSearch">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.FlightSearch@2641e737]" name="launchBrowser" is-config="true" duration-ms="24177" started-at="2019-11-17T16:17:59Z" finished-at="2019-11-17T16:18:23Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.HotelSearch@77846d2c]" name="launchBrowser" is-config="true" duration-ms="8396" started-at="2020-11-09T20:02:16Z" finished-at="2020-11-09T20:02:25Z">
           <params>
             <param index="0">
               <value>
@@ -61,7 +18,50 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="flightSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.FlightSearch@2641e737]" name="flightSearch" duration-ms="23835" started-at="2019-11-17T16:18:23Z" data-provider="getData" finished-at="2019-11-17T16:18:47Z">
+        <test-method status="PASS" signature="searchHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HotelSearch@77846d2c]" name="searchHotel" duration-ms="12316" started-at="2020-11-09T20:02:25Z" data-provider="getData" finished-at="2020-11-09T20:02:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hyderabad]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[21 Nov 2020]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[26 Nov 2020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Hyderabad (and vicinity), Telangana, India Hotel Search Results]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotel -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HotelSearch@77846d2c]" name="tearDown" is-config="true" duration-ms="94" started-at="2020-11-09T20:02:37Z" finished-at="2020-11-09T20:02:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.HotelSearch -->
+      <class name="testcases.FlightSearch">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="launchBrowser" is-config="true" duration-ms="7111" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="searchFlight(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="searchFlight" duration-ms="10644" started-at="2020-11-09T20:02:05Z" data-provider="getData" finished-at="2020-11-09T20:02:16Z">
           <params>
             <param index="0">
               <value>
@@ -70,17 +70,17 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[11/27/2019]]>
+                <![CDATA[Hyderabad]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[11/29/2019]]>
+                <![CDATA[21 Nov 2020]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Hyderabad]]>
+                <![CDATA[26 Nov 2020]]>
               </value>
             </param>
             <param index="4">
@@ -91,63 +91,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- flightSearch -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.FlightSearch@2641e737]" name="tearDown" is-config="true" duration-ms="5579" started-at="2019-11-17T16:18:47Z" finished-at="2019-11-17T16:18:52Z">
+        </test-method> <!-- searchFlight -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="tearDown" is-config="true" duration-ms="212" started-at="2020-11-09T20:02:16Z" finished-at="2020-11-09T20:02:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.FlightSearch -->
     </test> <!-- Chrome Test -->
-    <test name="FirefoxTest" duration-ms="59556" started-at="2019-11-17T16:18:53Z" finished-at="2019-11-17T16:19:53Z">
+    <test name="FirefoxTest" duration-ms="50359" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:48Z">
       <class name="testcases.HotelSearch">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:testcases.HotelSearch@71623278]" name="beforeMethod" is-config="true" duration-ms="22054" started-at="2019-11-17T16:18:54Z" finished-at="2019-11-17T16:19:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="hotelSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HotelSearch@71623278]" name="hotelSearch" duration-ms="24936" started-at="2019-11-17T16:19:16Z" data-provider="getData" finished-at="2019-11-17T16:19:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Hyderabad]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[11/28/2019]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11/30/2019]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Hyderabad (and vicinity), India Hotel Search Results]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hotelSearch -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HotelSearch@71623278]" name="tearDown" is-config="true" duration-ms="11764" started-at="2019-11-17T16:19:41Z" finished-at="2019-11-17T16:19:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.HotelSearch -->
-      <class name="testcases.FlightSearch">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.FlightSearch@44a3ec6b]" name="beforeSuite" is-config="true" duration-ms="15" started-at="2019-11-17T16:17:58Z" finished-at="2019-11-17T16:17:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.FlightSearch@44a3ec6b]" name="launchBrowser" is-config="true" duration-ms="14513" started-at="2019-11-17T16:18:54Z" finished-at="2019-11-17T16:19:08Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.HotelSearch@1da51a35]" name="launchBrowser" is-config="true" duration-ms="14044" started-at="2020-11-09T20:02:24Z" finished-at="2020-11-09T20:02:38Z">
           <params>
             <param index="0">
               <value>
@@ -158,7 +111,54 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="flightSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.FlightSearch@44a3ec6b]" name="flightSearch" duration-ms="27101" started-at="2019-11-17T16:19:08Z" data-provider="getData" finished-at="2019-11-17T16:19:35Z">
+        <test-method status="PASS" signature="searchHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HotelSearch@1da51a35]" name="searchHotel" duration-ms="8354" started-at="2020-11-09T20:02:38Z" data-provider="getData" finished-at="2020-11-09T20:02:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hyderabad]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[21 Nov 2020]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[26 Nov 2020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Hyderabad (and vicinity), Telangana, India Hotel Search Results]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotel -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HotelSearch@1da51a35]" name="tearDown" is-config="true" duration-ms="1558" started-at="2020-11-09T20:02:47Z" finished-at="2020-11-09T20:02:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.HotelSearch -->
+      <class name="testcases.FlightSearch">
+        <test-method status="PASS" signature="init()[pri:0, instance:testcases.FlightSearch@6d3af739]" name="init" is-config="true" duration-ms="7" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:01:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.FlightSearch@6d3af739]" name="launchBrowser" is-config="true" duration-ms="14846" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="searchFlight(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.FlightSearch@6d3af739]" name="searchFlight" duration-ms="8918" started-at="2020-11-09T20:02:13Z" data-provider="getData" finished-at="2020-11-09T20:02:22Z">
           <params>
             <param index="0">
               <value>
@@ -167,17 +167,17 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[11/27/2019]]>
+                <![CDATA[Hyderabad]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[11/29/2019]]>
+                <![CDATA[21 Nov 2020]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Hyderabad]]>
+                <![CDATA[26 Nov 2020]]>
               </value>
             </param>
             <param index="4">
@@ -188,8 +188,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- flightSearch -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.FlightSearch@44a3ec6b]" name="tearDown" is-config="true" duration-ms="17819" started-at="2019-11-17T16:19:35Z" finished-at="2019-11-17T16:19:53Z">
+        </test-method> <!-- searchFlight -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.FlightSearch@6d3af739]" name="tearDown" is-config="true" duration-ms="2216" started-at="2020-11-09T20:02:22Z" finished-at="2020-11-09T20:02:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

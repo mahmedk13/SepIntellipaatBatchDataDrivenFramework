@@ -44,13 +44,13 @@ public class ExtentListeners implements ITestListener {
 		
 		//TestBase.captureScreenshot();
 		
-		try {
-			test.fail("<b>"+"font color="+"red"+"Screenshot of failure"+"</font>"+"</b>", MediaEntityBuilder.createScreenCaptureFromPath(TestBase.screenshotName).build());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+//		try {
+//			test.fail("<b>"+"font color="+"red"+"Screenshot of failure"+"</font>"+"</b>", MediaEntityBuilder.createScreenCaptureFromPath(TestBase.screenshotName).build());
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
 		String methodName = result.getMethod().getMethodName();
 		String text = "<b>"+"Test Case: "+methodName.toUpperCase()+" FAILED"+"</b";
 		Markup m = MarkupHelper.createLabel(text, ExtentColor.RED);
