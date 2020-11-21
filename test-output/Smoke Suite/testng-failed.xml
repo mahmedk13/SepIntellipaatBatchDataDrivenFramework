@@ -4,16 +4,24 @@
   <listeners>
     <listener class-name="extentreports.ExtentListeners"/>
   </listeners>
-  <test thread-count="5" name="Chrome Test(failed)" parallel="tests">
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="testcases.HotelSearch">
         <methods>
           <include name="launchBrowser"/>
           <include name="tearDown"/>
-          <include name="searchHotel" invocation-numbers="0"/>
+          <include name="searchHotel"/>
         </methods>
       </class> <!-- testcases.HotelSearch -->
+      <class name="testcases.FlightSearch">
+        <methods>
+          <include name="init"/>
+          <include name="launchBrowser"/>
+          <include name="searchFlight"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.FlightSearch -->
     </classes>
-  </test> <!-- Chrome Test(failed) -->
+  </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Smoke Suite] -->

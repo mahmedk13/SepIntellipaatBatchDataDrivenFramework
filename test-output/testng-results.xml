@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Smoke Suite" duration-ms="50359" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:48Z">
+  <suite name="Smoke Suite" duration-ms="75923" started-at="2020-11-21T14:43:02Z" finished-at="2020-11-21T14:44:18Z">
     <groups>
     </groups>
-    <test name="Chrome Test" duration-ms="39213" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:37Z">
+    <test name="Chrome Test" duration-ms="68604" started-at="2020-11-21T14:43:02Z" finished-at="2020-11-21T14:44:10Z">
       <class name="testcases.HotelSearch">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.HotelSearch@77846d2c]" name="launchBrowser" is-config="true" duration-ms="8396" started-at="2020-11-09T20:02:16Z" finished-at="2020-11-09T20:02:25Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.HotelSearch@77846d2c]" name="launchBrowser" is-config="true" duration-ms="18052" started-at="2020-11-21T14:43:38Z" finished-at="2020-11-21T14:43:56Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="searchHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HotelSearch@77846d2c]" name="searchHotel" duration-ms="12316" started-at="2020-11-09T20:02:25Z" data-provider="getData" finished-at="2020-11-09T20:02:37Z">
+        <test-method status="PASS" signature="searchHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HotelSearch@77846d2c]" name="searchHotel" duration-ms="13846" started-at="2020-11-21T14:43:56Z" data-provider="getData" finished-at="2020-11-21T14:44:10Z">
           <params>
             <param index="0">
               <value>
@@ -44,13 +44,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchHotel -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HotelSearch@77846d2c]" name="tearDown" is-config="true" duration-ms="94" started-at="2020-11-09T20:02:37Z" finished-at="2020-11-09T20:02:37Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HotelSearch@77846d2c]" name="tearDown" is-config="true" duration-ms="245" started-at="2020-11-21T14:44:10Z" finished-at="2020-11-21T14:44:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.HotelSearch -->
       <class name="testcases.FlightSearch">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="launchBrowser" is-config="true" duration-ms="7111" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:05Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="launchBrowser" is-config="true" duration-ms="13431" started-at="2020-11-21T14:43:03Z" finished-at="2020-11-21T14:43:16Z">
           <params>
             <param index="0">
               <value>
@@ -61,7 +61,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="searchFlight(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="searchFlight" duration-ms="10644" started-at="2020-11-09T20:02:05Z" data-provider="getData" finished-at="2020-11-09T20:02:16Z">
+        <test-method status="PASS" signature="searchFlight(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="searchFlight" duration-ms="21623" started-at="2020-11-21T14:43:16Z" data-provider="getData" finished-at="2020-11-21T14:43:38Z">
           <params>
             <param index="0">
               <value>
@@ -92,15 +92,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchFlight -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="tearDown" is-config="true" duration-ms="212" started-at="2020-11-09T20:02:16Z" finished-at="2020-11-09T20:02:16Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.FlightSearch@4cf4d528]" name="tearDown" is-config="true" duration-ms="540" started-at="2020-11-21T14:43:38Z" finished-at="2020-11-21T14:43:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.FlightSearch -->
     </test> <!-- Chrome Test -->
-    <test name="FirefoxTest" duration-ms="50359" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:48Z">
+    <test name="FirefoxTest" duration-ms="75923" started-at="2020-11-21T14:43:02Z" finished-at="2020-11-21T14:44:18Z">
       <class name="testcases.HotelSearch">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.HotelSearch@1da51a35]" name="launchBrowser" is-config="true" duration-ms="14044" started-at="2020-11-09T20:02:24Z" finished-at="2020-11-09T20:02:38Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.HotelSearch@1da51a35]" name="launchBrowser" is-config="true" duration-ms="20558" started-at="2020-11-21T14:43:40Z" finished-at="2020-11-21T14:44:00Z">
           <params>
             <param index="0">
               <value>
@@ -111,7 +111,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="searchHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HotelSearch@1da51a35]" name="searchHotel" duration-ms="8354" started-at="2020-11-09T20:02:38Z" data-provider="getData" finished-at="2020-11-09T20:02:47Z">
+        <test-method status="PASS" signature="searchHotel(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.HotelSearch@1da51a35]" name="searchHotel" duration-ms="15004" started-at="2020-11-21T14:44:00Z" data-provider="getData" finished-at="2020-11-21T14:44:15Z">
           <params>
             <param index="0">
               <value>
@@ -137,17 +137,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchHotel -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HotelSearch@1da51a35]" name="tearDown" is-config="true" duration-ms="1558" started-at="2020-11-09T20:02:47Z" finished-at="2020-11-09T20:02:48Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.HotelSearch@1da51a35]" name="tearDown" is-config="true" duration-ms="2478" started-at="2020-11-21T14:44:15Z" finished-at="2020-11-21T14:44:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.HotelSearch -->
       <class name="testcases.FlightSearch">
-        <test-method status="PASS" signature="init()[pri:0, instance:testcases.FlightSearch@6d3af739]" name="init" is-config="true" duration-ms="7" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:01:58Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:testcases.FlightSearch@6d3af739]" name="init" is-config="true" duration-ms="20" started-at="2020-11-21T14:43:02Z" finished-at="2020-11-21T14:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.FlightSearch@6d3af739]" name="launchBrowser" is-config="true" duration-ms="14846" started-at="2020-11-09T20:01:58Z" finished-at="2020-11-09T20:02:13Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:testcases.FlightSearch@6d3af739]" name="launchBrowser" is-config="true" duration-ms="22135" started-at="2020-11-21T14:43:03Z" finished-at="2020-11-21T14:43:25Z">
           <params>
             <param index="0">
               <value>
@@ -158,7 +158,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="searchFlight(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.FlightSearch@6d3af739]" name="searchFlight" duration-ms="8918" started-at="2020-11-09T20:02:13Z" data-provider="getData" finished-at="2020-11-09T20:02:22Z">
+        <test-method status="PASS" signature="searchFlight(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.FlightSearch@6d3af739]" name="searchFlight" duration-ms="11729" started-at="2020-11-21T14:43:25Z" data-provider="getData" finished-at="2020-11-21T14:43:36Z">
           <params>
             <param index="0">
               <value>
@@ -189,7 +189,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchFlight -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.FlightSearch@6d3af739]" name="tearDown" is-config="true" duration-ms="2216" started-at="2020-11-09T20:02:22Z" finished-at="2020-11-09T20:02:24Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.FlightSearch@6d3af739]" name="tearDown" is-config="true" duration-ms="3143" started-at="2020-11-21T14:43:36Z" finished-at="2020-11-21T14:43:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
