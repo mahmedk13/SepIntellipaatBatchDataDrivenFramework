@@ -30,6 +30,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
+	//adding this comment
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	
